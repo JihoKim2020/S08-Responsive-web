@@ -1,0 +1,219 @@
+body {
+    font-family: "Quicksand", sans-serif;
+    margin: 0;
+    background-color: rgba(80, 80, 80, 0.925);
+}
+
+a {
+    text-decoration: none;
+}
+
+/* rem은 브라우저의 기본 폰트크기에 비례 : 1rem = 16px */
+
+#main-header {
+    height: 5rem;
+    padding: 0 5%;
+    display:flex;
+    align-items: center;
+    justify-content: space-between; 
+}
+
+#page-logo {
+    font-size: 1.5rem;
+    font-weight : bold;
+    color: rgb(183, 185, 40);
+    text-transform: uppercase;
+}
+
+
+header {
+    position: static;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+header ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;    
+    justify-content: flex-end;
+}
+
+header li {
+    margin : 1rem;
+    text-align: right;
+}
+
+header li a {
+    background-color: rgba(36, 36, 36, 0.623);
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    padding : 10px;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+header li a:hover {
+    background-color: rgb(255, 255, 255, 0.8);
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
+    color :black;
+    border-radius: 5px;
+    padding : 10px;
+    }
+
+.menu-btn {
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    display : none;
+}
+
+.menu-btn span {
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: rgb(255, 255, 255);
+    margin: 5px;
+    border-radius: 5px;
+}
+
+#side-drawer {
+    position: fixed;
+    top: 0;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.753);
+    display: none;
+}
+
+#side-drawer:target {
+    display: block;
+}
+
+#side-drawer header {    
+    height: 5rem;
+    padding: 0 5%;
+    display:flex;
+    align-items: center;
+    justify-content: flex-end; 
+}
+
+.close-btn {
+    width: 3rem;
+    height: 3rem;
+    margin : 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.close-btn span {
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: rgb(255, 255, 255);
+    margin: 5px;
+    border-radius: 5px;
+}
+
+#side-drawer ul {
+    list-style: none;
+    margin: 25%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#side-drawer li {
+    margin : 1rem;
+    text-align: center;
+}
+
+#side-drawer a {
+    color : white;
+    font-size: 2rem;
+    font-weight: 300;
+    text-align: center;
+}
+
+
+h1 {
+    color:rgb(255, 255, 255);
+    font-size: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 15px auto;
+}
+
+#latest-products {
+    width: 80%;
+    margin: 2rem auto;
+}
+
+#latest-products ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        margin:0;
+        padding: 0;
+        list-style: none;
+    }
+
+main li {
+    background-color: rgb(231, 147, 147);
+    text-align: center;
+    list-style: none;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.food-item img {
+    height : 15rem;
+    width : 100%;
+    object-fit: cover;
+}
+
+.food-item-content {
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    text-decoration: none;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.btn {
+    background-color: darkorange;
+    color :rgb(255, 255, 255);
+    border-radius: 4px;
+    padding: 0.5rem 1.5rem;
+}
+
+/* 반응형 웹 디자인*/
+
+@media (max-width: 48rem) {
+    header ul {
+        display: none;
+    }
+
+    .menu-btn {
+        display: flex;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    #latest-products ul {
+        grid-template-columns: 1fr;
+    }
+}
